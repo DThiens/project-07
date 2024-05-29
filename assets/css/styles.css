@@ -197,7 +197,7 @@ a {
   line-height: 1.67;
 }
 
-.subscribe-form {
+.subscribe-form__group {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -208,6 +208,15 @@ a {
   background: #fff;
   box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
   overflow: hidden;
+}
+
+.subscribe-form:has(:invalid:not(:placeholder-shown)) .hero__notice {
+  display: block;
+}
+
+.subscribe-form:has(:invalid) .subscribe-form__submit {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .subscribe-form__input {
@@ -229,6 +238,7 @@ a {
   margin-top: 20px;
   font-weight: 600;
   line-height: 1.71;
+  display: none;
 }
 
 .hero__media-wrap {
@@ -1071,6 +1081,10 @@ a {
   line-height: 1.62;
 }
 
+.blog-item__link:hover {
+  color: var(--primary-color);
+}
+
 /* Download */
 
 .download {
@@ -1100,7 +1114,6 @@ a {
   height: 154px;
   transition: rotate 0.2s;
 }
-
 
 .download-decor__img:nth-of-type(1) {
   top: 0;
@@ -1278,6 +1291,7 @@ a {
 }
 
 .footer__form {
+  position: relative;
   margin-top: 24px;
   width: 403px;
   height: 52px;
@@ -1286,6 +1300,15 @@ a {
   gap: 20px;
   background: #fafbff;
   box-shadow: none;
+}
+
+.footer__form:has(:invalid) .footer__form-btn {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.footer__form:has(:invalid:not(:placeholder-shown)) .footer__notice {
+  display: block;
 }
 
 .footer__form-input {
@@ -1309,6 +1332,16 @@ a {
   border-radius: 6px;
   background: #7264d6;
   border: none;
+}
+
+.footer__notice {
+  bottom: -32px;
+  left: 0;
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.71;
+  display: none;
 }
 
 .footer__contact {
