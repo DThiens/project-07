@@ -30,11 +30,11 @@ a {
   text-decoration: none;
 }
 
-.container {
+/* .container {
   width: 1170px;
   max-width: calc(100% - 48px);
   margin: 0 auto;
-}
+} */
 
 .btn {
   display: inline-flex;
@@ -148,15 +148,17 @@ a {
   margin-top: 36px;
   padding-top: 40px;
 }
-
+/* 
 .hero__inner {
   display: flex;
   align-items: center;
   column-gap: 60px;
-}
+} */
 
 .hero__content {
-  padding: 57px 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hero__label {
@@ -242,7 +244,7 @@ a {
 }
 
 .hero__media-wrap {
-  padding: 0 174px 0 100px;
+  /* padding: 0 174px 0 100px; */
   position: relative;
 }
 
@@ -253,7 +255,7 @@ a {
 .hero__deposit {
   position: absolute;
   top: 113px;
-  left: 0;
+  left: -110px;
   padding: 14px 10px;
   display: inline-flex;
   align-items: center;
@@ -452,6 +454,12 @@ a {
   background: #696d77;
 }
 
+.work__content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .work__content-heading {
   margin-top: 12px;
 }
@@ -547,8 +555,14 @@ a {
   border-radius: 50%;
 }
 
+.feature__media {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .feature__media-wrap {
-  width: 570px;
+  width: 100%;
   height: 425px;
   position: relative;
 }
@@ -556,7 +570,7 @@ a {
 .feature__media-img {
   width: 482px;
   position: absolute;
-  left: 0;
+  right: 88px;
   top: 48px;
 }
 
@@ -666,11 +680,11 @@ a {
   padding-top: 100px;
 }
 
-.service__inner {
+/* .service__inner {
   display: flex;
   gap: 130px;
   align-items: center;
-}
+} */
 
 .service__media {
   position: relative;
@@ -764,6 +778,9 @@ a {
 }
 
 .service__content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   width: 470px;
   height: 500px;
   flex-shrink: 0;
@@ -862,11 +879,14 @@ a {
 
 .review__list {
   padding: 70px 0 38px;
-  display: flex;
-  gap: 30px;
+  /* display: flex;
+  gap: 30px; */
 }
 
 .review-item {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   width: 570px;
   text-align: center;
 }
@@ -1029,9 +1049,9 @@ a {
 
 .blog__list {
   padding-top: 70px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  row-gap: 30px;
 }
 
 .blog-item {
